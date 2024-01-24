@@ -1,0 +1,18 @@
+@{
+    Layout = "_Layout";
+}
+
+<body>
+    <div id="tombstone">
+        <h2>@Model.Name</h2>
+        <p>@Model.Birthday.ToString("d") - @DateTime.Now.ToString("d")</p>
+        <p>@Model.Cause</p>
+        <p>@Model.Hunger</p>
+    </div>
+
+
+    <p>You have laid @Model.Name to rest</p>
+    <form class="col" action="/pets/@Model.Id/delete" method="post">
+        <button>RIP</button>
+    </form>
+</body>
